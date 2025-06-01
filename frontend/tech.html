@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dern-Support – Technician Dashboard</title>
+    <link rel="stylesheet" href="tech.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="home.html" class="nav-logo">Dern-Support</a>
+        <div class="nav-links">
+          <a href="home.html">Home</a>
+          <a href="home.html#support">Support</a>
+          <a href="home.html#knowledge">Knowledge Base</a>
+          <a href="index.html">Login / Register</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Technician Card -->
+    <div class="container">
+      <div class="card tech-card">
+        <h1 class="title">Technician Dashboard</h1>
+        <p id="welcomeTech" class="welcome-text"></p>
+
+        <!-- Assigned Tasks Table -->
+        <section class="section">
+          <h2 class="section-title">Your Assigned Tasks</h2>
+          <table id="tasksTable">
+            <thead>
+              <tr>
+                <th>Task ID</th>
+                <th>Description</th>
+                <th>Date</th>
+                <th>Priority</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Rows inserted by tech.js -->
+            </tbody>
+          </table>
+        </section>
+
+        <button class="btn secondary logout-btn" onclick="logoutTech()">
+          Logout
+        </button>
+      </div>
+    </div>
+
+    <script src="tech.js"></script>
+  </body>
+</html>

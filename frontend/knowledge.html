@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Knowledge Base – Dern-Support</title>
+    <link rel="stylesheet" href="knowledge.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="home.html" class="nav-logo">Dern-Support</a>
+        <div class="nav-links">
+          <a href="home.html">Home</a>
+          <a href="index.html">Login / Register</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="kb-hero">
+      <h1>Knowledge Base</h1>
+      <p>Browse detailed guides to troubleshoot common issues.</p>
+    </section>
+
+    <section class="kb-content">
+      <!-- Article 1: Slow Performance -->
+      <article id="slow-performance" class="kb-article">
+        <h2>Diagnosing Slow Computer Performance</h2>
+        <h3>Symptoms</h3>
+        <ul>
+          <li>Applications take too long to open</li>
+          <li>System freezes or lags under load</li>
+          <li>Disk or CPU usage spiking to 100%</li>
+        </ul>
+        <h3>Step-by-Step Fix</h3>
+        <ol>
+          <li>
+            <strong>Check Task Manager / Activity Monitor:</strong>
+            Identify any processes consuming excessive CPU or RAM.
+          </li>
+          <li>
+            <strong>Clear Disk Space:</strong>
+            Remove temporary files, uninstall unused programs, and empty Recycle
+            Bin.
+          </li>
+          <li>
+            <strong>Disable Startup Programs:</strong>
+            Use Task Manager (Windows) or System Preferences → Users & Groups →
+            Login Items (Mac) to turn off unneeded startup apps.
+          </li>
+          <li>
+            <strong>Run Disk Defragmentation (Windows only):</strong>
+            Open “Defragment and Optimize Drives” and optimize your main drive.
+          </li>
+          <li>
+            <strong>Check for Malware:</strong>
+            Run a full system scan with an up-to-date antivirus tool.
+          </li>
+          <li>
+            <strong>Upgrade Hardware (Optional):</strong>
+            If performance remains poor, consider upgrading to SSD or adding
+            more RAM.
+          </li>
+        </ol>
+      </article>
+
+      <!-- Article 2: Wi-Fi Issues -->
+      <article id="wifi-issues" class="kb-article">
+        <h2>Fixing Common Wi-Fi Connectivity Issues</h2>
+        <h3>Symptoms</h3>
+        <ul>
+          <li>Cannot connect to Wi-Fi network</li>
+          <li>Connection drops intermittently</li>
+          <li>Slow wireless speeds despite strong signal</li>
+        </ul>
+        <h3>Step-by-Step Fix</h3>
+        <ol>
+          <li>
+            <strong>Restart Router & Modem:</strong>
+            Power cycle both devices (unplug 30 seconds, then plug back in).
+          </li>
+          <li>
+            <strong>Forget & Reconnect to Network:</strong>
+            In settings, “Forget” the wireless network and then re-enter
+            password.
+          </li>
+          <li>
+            <strong>Update Wireless Drivers:</strong>
+            On Windows, open Device Manager → Network adapters → Update driver.
+            On Mac, ensure macOS is up to date.
+          </li>
+          <li>
+            <strong>Check Channel Interference:</strong>
+            Use a Wi-Fi scanning tool (like inSSIDer) to pick the clearest
+            channel on 2.4GHz or 5GHz.
+          </li>
+          <li>
+            <strong>Position Router Optimally:</strong>
+            Place it centrally, off the floor, away from microwaves and thick
+            walls.
+          </li>
+          <li>
+            <strong>Reset Network Settings (If Needed):</strong>
+            <em>Windows:</em> `Settings → Network & Internet → Status → Network
+            reset` <em>Mac:</em> Delete and re-add Wi-Fi service in Network
+            Preferences.
+          </li>
+        </ol>
+      </article>
+
+      <!-- Article 3: Malware Removal -->
+      <article id="malware-removal" class="kb-article">
+        <h2>Removing Malware and Viruses Safely</h2>
+        <h3>Symptoms</h3>
+        <ul>
+          <li>Unexpected pop-ups or ads</li>
+          <li>Performance slows after opening certain websites</li>
+          <li>Unknown programs running in background</li>
+        </ul>
+        <h3>Step-by-Step Fix</h3>
+        <ol>
+          <li>
+            <strong>Run Safe Mode Scan (Windows):</strong>
+            Restart in Safe Mode (F8 on startup), then run antivirus scan.
+          </li>
+          <li>
+            <strong>Use a Bootable Antivirus USB:</strong>
+            Create a bootable rescue disk (e.g., Kaspersky Rescue Disk) and scan
+            before Windows boots.
+          </li>
+          <li>
+            <strong>Install & Update a Reputable Antivirus Tool:</strong>
+            Examples: Malwarebytes, Avast, Bitdefender. Perform a full system
+            scan.
+          </li>
+          <li>
+            <strong>Remove Quarantined Files:</strong>
+            Follow antivirus prompts to delete or quarantine infected files.
+          </li>
+          <li>
+            <strong>Check Browser Extensions/Add-ons:</strong>
+            Remove suspicious extensions and reset browser settings to default.
+          </li>
+          <li>
+            <strong>Enable Windows Defender/Mac XProtect:</strong>
+            Ensure built-in protections are enabled and updated regularly.
+          </li>
+        </ol>
+      </article>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© 2023 Dern-Support. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

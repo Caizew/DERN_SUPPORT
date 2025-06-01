@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dern-Support – Login / Register</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar (same as home) -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="home.html" class="nav-logo">Dern-Support</a>
+        <div class="nav-links">
+          <a href="home.html">Home</a>
+          <a href="home.html#support">Support</a>
+          <a href="knowledge.html">Knowledge Base</a>
+          <a href="index.html" class="active">Login / Register</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Login/Register Card -->
+    <div class="container">
+      <div class="card auth-card">
+        <h1 class="title">Login or Register</h1>
+
+        <!-- Toggle Buttons -->
+        <div class="toggle-buttons">
+          <button
+            id="showLoginBtn"
+            class="toggle-btn active"
+            onclick="showLogin()"
+          >
+            Login
+          </button>
+          <button
+            id="showRegisterBtn"
+            class="toggle-btn"
+            onclick="showRegister()"
+          >
+            Register
+          </button>
+        </div>
+
+        <!-- Login Form -->
+        <section id="login-section" class="auth-section">
+          <form id="loginForm" onsubmit="return false;">
+            <div class="input-group">
+              <label for="loginUsername">Username</label>
+              <input
+                type="text"
+                id="loginUsername"
+                placeholder="Enter your username"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <label for="loginPassword">Password</label>
+              <input
+                type="password"
+                id="loginPassword"
+                placeholder="Enter your password"
+                required
+              />
+            </div>
+            <button type="submit" class="btn" onclick="login()">Login</button>
+          </form>
+        </section>
+
+        <!-- Register Form -->
+        <section id="register-section" class="auth-section hidden">
+          <form id="registerForm" onsubmit="return false;">
+            <div class="input-group">
+              <label for="regUsername">Username</label>
+              <input
+                type="text"
+                id="regUsername"
+                placeholder="Choose a username"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <label for="regPassword">Password</label>
+              <input
+                type="password"
+                id="regPassword"
+                placeholder="Choose a password"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <label for="regRole">Register as:</label>
+              <select id="regRole" required>
+                <option value="">-- Select Role --</option>
+                <option value="individual">👤 Individual</option>
+                <option value="business">🏢 Business</option>
+                <option value="technician">🧑‍🔧 Technician</option>
+                <option value="admin">👔 Admin (Manager)</option>
+              </select>
+            </div>
+            <button type="submit" class="btn secondary" onclick="register()">
+              Register
+            </button>
+          </form>
+        </section>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      // Toggle between Login and Register
+      function showLogin() {
+        document.getElementById("login-section").classList.remove("hidden");
+        document.getElementById("register-section").classList.add("hidden");
+        document.getElementById("showLoginBtn").classList.add("active");
+        document.getElementById("showRegisterBtn").classList.remove("active");
+      }
+      function showRegister() {
+        document.getElementById("register-section").classList.remove("hidden");
+        document.getElementById("login-section").classList.add("hidden");
+        document.getElementById("showRegisterBtn").classList.add("active");
+        document.getElementById("showLoginBtn").classList.remove("active");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dern-Support – Admin Panel</title>
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="home.html" class="nav-logo">Dern-Support</a>
+        <div class="nav-links">
+          <a href="home.html">Home</a>
+          <a href="home.html#support">Support</a>
+          <a href="home.html#knowledge">Knowledge Base</a>
+          <a href="index.html">Login / Register</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Admin Card -->
+    <div class="container">
+      <div class="card admin-card">
+        <h1 class="title">Admin Dashboard</h1>
+        <p id="welcome" class="welcome-text"></p>
+
+        <!-- Spare Parts Inventory (unchanged) -->
+        <section class="section">
+          <h2 class="section-title">Spare Parts Inventory</h2>
+          <input
+            type="text"
+            id="searchPart"
+            class="search-input"
+            placeholder="Search parts..."
+            onkeyup="searchParts()"
+          />
+          <table id="partsTable">
+            <thead>
+              <tr>
+                <th>Part ID</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Example rows -->
+              <tr>
+                <td>1</td>
+                <td>Hard Drive</td>
+                <td>12</td>
+                <td>
+                  <button class="btn small" onclick="editPart(1)">Edit</button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>RAM Module</td>
+                <td>25</td>
+                <td>
+                  <button class="btn small" onclick="editPart(2)">Edit</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Assign Task to Technician -->
+        <section class="section">
+          <h2 class="section-title">Assign Task to Technician</h2>
+          <form id="assignForm" onsubmit="return false;" class="assign-form">
+            <div class="input-group">
+              <label for="techSelect">Select Technician</label>
+              <select id="techSelect" required>
+                <option value="">-- Select Technician --</option>
+                <!-- Options populated dynamically -->
+              </select>
+            </div>
+            <div class="input-group">
+              <label for="taskDesc">Task Description</label>
+              <input
+                type="text"
+                id="taskDesc"
+                placeholder="Describe the task..."
+                required
+              />
+            </div>
+            <div class="input-group">
+              <label for="taskDate">Date</label>
+              <input type="date" id="taskDate" required />
+            </div>
+            <div class="input-group">
+              <label for="taskPriority">Priority</label>
+              <select id="taskPriority" required>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+              </select>
+            </div>
+            <button type="submit" class="btn" onclick="assignTask()">
+              Assign Task
+            </button>
+          </form>
+        </section>
+
+        <!-- Manage Support Requests -->
+        <section class="section">
+          <h2 class="section-title">Manage Support Requests</h2>
+          <table id="requestsTable">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>User</th>
+                <th>Message</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Rows inserted by admin.js -->
+            </tbody>
+          </table>
+        </section>
+
+        <button class="btn secondary logout-btn" onclick="logout()">
+          Logout
+        </button>
+      </div>
+    </div>
+
+    <script src="admin.js"></script>
+  </body>
+</html>

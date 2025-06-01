@@ -1,0 +1,122 @@
+/* Reset and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and base styles */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafe;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+  background-color: #2c3e50;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  color: #ecf0f1;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: #ecf0f1;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 6px 8px;
+  transition: background 0.2s ease;
+}
+
+.nav-links a:hover {
+  background-color: #34495e;
+  border-radius: 4px;
+}
+
+/* Knowledge Hero */
+.kb-hero {
+  background: #007bff;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.kb-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.kb-hero p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Knowledge Content */
+.kb-content {
+  padding: 40px 0;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.kb-article {
+  background: #fff;
+  margin-bottom: 30px;
+  padding: 20px 25px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.kb-article h2 {
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.kb-article h3 {
+  margin-top: 15px;
+  margin-bottom: 8px;
+  color: #34495e;
+}
+
+.kb-article ul,
+.kb-article ol {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.kb-article li {
+  margin-bottom: 8px;
+  color: #555;
+}
+
+/* Footer */
+.footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 30px;
+}
+
+.footer p {
+  font-size: 0.9rem;
+}

@@ -1,0 +1,163 @@
+/* Reset and Box-Sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Base Styles */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafe;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navigation Bar (same as home) */
+.navbar {
+  background-color: #2c3e50;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  color: #ecf0f1;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: #ecf0f1;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 6px 8px;
+  transition: background 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  background-color: #34495e;
+  border-radius: 4px;
+}
+
+/* Container & Card */
+.container {
+  width: 100%;
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 0 15px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px 25px;
+}
+
+/* Auth Card Specific */
+.auth-card .title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #2c3e50;
+}
+
+/* Toggle Buttons */
+.toggle-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 10px 0;
+  border: none;
+  background: #ecf0f1;
+  color: #2c3e50;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s ease;
+}
+
+.toggle-btn:hover {
+  background: #dcdfe2;
+}
+
+.toggle-btn.active {
+  background: #007bff;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Input Group */
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fafafa;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 3px rgba(0, 123, 255, 0.3);
+}
+
+/* Buttons */
+.btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  background: #007bff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+.btn.secondary {
+  background: #28a745;
+}
+
+.btn.secondary:hover {
+  background: #1e7e34;
+}
+
+/* Hide Sections */
+.hidden {
+  display: none;
+}

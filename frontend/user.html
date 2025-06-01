@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>User Dashboard – Submit Request</title>
+    <link rel="stylesheet" href="user.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1 class="title">Submit Support Request</h1>
+
+        <p id="welcome"></p>
+
+        <form id="requestForm" onsubmit="return false;">
+          <div class="input-group">
+            <label for="requestMessage">Your Issue</label>
+            <textarea
+              id="requestMessage"
+              placeholder="Describe your hardware/software issue..."
+              rows="4"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn" onclick="submitRequest()">
+            Submit Request
+          </button>
+        </form>
+
+        <button class="btn secondary" onclick="logout()">Logout</button>
+      </div>
+    </div>
+
+    <script src="user.js"></script>
+  </body>
+</html>
